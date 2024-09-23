@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Colaboradores</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        img { max-width: 100%; height: auto; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Dashboard de Colaboradores</h1>
+    
+    <h2>Gráfico de Barras: Edad vs Salario</h2>
+    <img src="data:image/png;base64,{{ bar_chart }}" alt="Gráfico de Barras">
+    
+    <h2>Gráfico Circular: Colaboradores por Ciudad</h2>
+    <img src="data:image/png;base64,{{ pie_chart }}" alt="Gráfico Circular">
+    
+    <h2>Tabla de Colaboradores</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+            <th>Salario</th>
+        </tr>
+        {% for colaborador in colaboradores %}
+        <tr>
+            <td>{{ colaborador[0] }}</td>
+            <td>{{ colaborador[1] }}</td>
+            <td>{{ colaborador[2] }}</td>
+            <td>{{ colaborador[3] }}</td>
+            <td>{{ colaborador[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
