@@ -133,6 +133,11 @@ Carpeta que contiene el archivo HTML (01.dashboard.html) para el dashboard.
 Se generan dinámicamente a partir de los datos de la base de datos MySQL.
 
 ### Ejecución
+
 Se ejecuta el archivo principal para iniciar el servidor, desarrollando lo solicitado:
 
 	python 02.dashboard.py
+
+ Para visualizar los gráficos localmente, ingresar:
+
+ http://127.0.0.1:5000
